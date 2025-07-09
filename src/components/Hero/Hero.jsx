@@ -103,8 +103,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <Button content="Mon Github" onClick={openCV} className="primary" />
-          <Button content="Voir mon CV" onClick={openGithub} className="secondary" />
+          <Button content="Mon Github" onClick={openGithub} className="primary" />
+          <Button content="Voir mon CV" onClick={openCV} className="secondary" />
         </motion.div>
       </div>
     </div>

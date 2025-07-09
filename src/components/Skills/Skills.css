@@ -1,0 +1,98 @@
+.skills-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .skill-badge {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+    letter-spacing: 0.5px;
+    border: none;
+  }
+  
+  .skill-badge:hover {
+    transform: scale(1.08);
+  }
+  
+  .skill-hover-square {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width: 50%;
+    min-width: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-badges-container {
+      gap: 0.7rem;
+    }
+    .skill-badge {
+      font-size: 1rem;
+      padding: 0.6rem 1.1rem;
+    }
+  } 
+
+  .formation{
+    margin-top: 50px;
+  }
+  
+  .skills-formation {
+    margin-top: 2.5rem;
+    text-align: center;
+    background: linear-gradient(90deg, #00b894 0%, #6c5ce7 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 1.5rem 1rem 1.5rem 4.5rem;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 4px 24px rgba(108, 92, 231, 0.15);
+    font-size: 1.15rem;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+  }
+  
+  .skills-formation:hover {
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 184, 148, 0.25);
+  }
+  
+  .skills-formation .formation-icon {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.2rem;
+    height: 2.2rem;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .skills-formation .formation-icon img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  
+  .skills-formation a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  
+  .skills-formation a:hover {
+    color: #ffeaa7;
+  } 
