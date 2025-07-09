@@ -1,0 +1,38 @@
+.cta-button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  .cta-button.primary {
+    background-color: #00b894;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 184, 148, 0.5);
+  }
+  
+  .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 184, 148, 0.7);
+  }
+  
+  .cta-button.secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    backdrop-filter: blur(10px);
+  }
+  
+  .cta-button.secondary:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+  }
