@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
 import './SkillsBadge.css';
 
+const logos = import.meta.glob('../../assets/*_logo.svg', { eager: true, import: 'default' });
+
+function getLogo(skillName) {
+  const fileName = `../../assets/${skillName.toLowerCase()}_logo.svg`;
+  return logos[fileName];
+}
+
 function SkillsBadge ({skill, index, hovered, setHovered, hexToRgb}) {
     return (
         <motion.span
@@ -20,7 +27,7 @@ function SkillsBadge ({skill, index, hovered, setHovered, hexToRgb}) {
             {hovered === index && (
                 <motion.img
                     className="skill-hover-square"
-                    src={`/public/${skill.name}_logo.svg`}
+                    src={getLogo(skill.name)}
                     alt={`${skill.name} Logo`}
                     initial={{ y: 0, opacity: 0 }}
                     animate={{ y: 35, opacity: 1 }}
