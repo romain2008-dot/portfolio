@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Nav from './Nav/Nav.jsx';
 import Hero from './Hero/Hero.jsx';
+import About from './About/About.jsx';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Nav />
       <Hero />
       <main>
-
+        <About />
       </main>
     </div>
   );
