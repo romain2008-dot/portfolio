@@ -27,7 +27,7 @@ main {
   padding: 120px 0; 
   position: relative;
   margin-bottom: 2rem;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
 }
 
