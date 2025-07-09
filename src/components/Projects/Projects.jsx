@@ -17,7 +17,7 @@ const Projects = () => {
       title: "Sophie bluel",
       description: "Portfolio de sophie bluel",
       technologies: ["HTML", "CSS", "JavaScript"],
-      image: "https://via.placeholder.com/400x250/00cec9/ffffff?text=Dashboard",
+      image: "./sophie-bluel.png",
       github: "https://github.com/romain2008-dot/sophie-bluel",
       live: "https://sophie-bluel-kohl.vercel.app/index.html"
     },
