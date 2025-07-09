@@ -6,23 +6,6 @@
     margin-top: 2rem;
   }
   
-  .skill-badge {
-    position: relative;
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: default;
-    letter-spacing: 0.5px;
-    border: none;
-  }
-  
-  .skill-badge:hover {
-    transform: scale(1.08);
-  }
-  
   .skill-hover-square {
     position: absolute;
     top: 50%;
@@ -34,10 +17,6 @@
   @media (max-width: 768px) {
     .skills-badges-container {
       gap: 0.7rem;
-    }
-    .skill-badge {
-      font-size: 1rem;
-      padding: 0.6rem 1.1rem;
     }
   } 
 
