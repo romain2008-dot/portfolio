@@ -38,20 +38,21 @@ const Projects = () => {
     <section id="projects" className="section projects">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
         >
           <h2 className="section-title gradient-text">
             Mes Projets
           </h2>
           
-          <div className="projects-grid">
+          <motion.div 
+            className="projects-grid"
+          >
             {projects.map((project, index) => (
               <Project key={index} project={project} index={index} />
             ))}
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
