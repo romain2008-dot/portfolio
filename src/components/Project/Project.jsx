@@ -13,13 +13,22 @@ function Project ( { project, index } ) {
         <motion.div
         key={project.title}
         className="project-card"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
         whileHover={{ y: -10 }}
       >
         <div className="project-image">
-          <img src={project.image} alt={project.title} />
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            loading="lazy"
+            onLoad={(e) => {
+              e.target.style.opacity = '1';
+            }}
+            style={{ opacity: 0, transition: 'opacity 0.3s ease' }}
+          />
         </div>
         
         <div className="project-content">
