@@ -6,10 +6,12 @@ import About from './About/About.jsx';
 import Skills from './Skills/Skills.jsx';
 import Projects from './Projects/Projects.jsx';
 import Contact from './Contact/Contact.jsx';
+import ParticleBackground from './ParticleBackground/ParticleBackground.jsx';
 
 function App() {
   return (
     <div className="App">
+      <ParticleBackground />
       <Nav />
       <Hero />
       <main>

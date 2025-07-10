@@ -1,0 +1,34 @@
+.particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .particles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .particle {
+    position: absolute;
+    background: rgba(0, 184, 148, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 184, 148, 0.5);
+  }
+  
+  .particle:nth-child(odd) {
+    background: rgba(0, 206, 201, 0.7); 
+    box-shadow: 0 0 10px rgba(0, 206, 201, 0.5);
+  }
+  
+  .particle:nth-child(3n) {
+    background: rgba(108, 92, 231, 0.6);
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+  } 
