@@ -1,5 +1,6 @@
 .hero {
     width: 100%;
+    min-height: 100vh;
     background-color: rgba(10, 10, 10, 0.5);
     display: flex;
     align-items: center;
@@ -119,6 +120,10 @@
   }
   
   @media (max-width: 768px) {
+    .hero {
+      min-height: 100vh;
+    }
+    
     .hero-content {
       padding: 0 1rem;
     }
@@ -158,15 +163,21 @@
     .gradient-orb {
       width: 250px;
       height: 250px;
+      left: 5%;
     }
     
     .gradient-orb-2 {
       width: 200px;
       height: 200px;
+      right: 5%;
     }
   }
   
   @media (max-width: 480px) {
+    .hero {
+      min-height: 100vh;
+    }
+    
     .hero-title {
       font-size: 1.5rem;
       min-height: 2.5rem;
@@ -185,5 +196,17 @@
       min-width: 220px;
       font-size: 0.9rem;
       padding: 0.8rem 1.5rem;
+    }
+    
+    .gradient-orb {
+      width: 200px;
+      height: 200px;
+      left: 2%;
+    }
+    
+    .gradient-orb-2 {
+      width: 150px;
+      height: 150px;
+      right: 2%;
     }
   } 
