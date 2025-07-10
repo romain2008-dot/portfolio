@@ -84,7 +84,7 @@ const Contact = () => {
                   à les concrétiser.
                 </p>
 
-                <div className="contact-details">
+                                <div className="contact-details">
                   <div className="contact-item">
                     <span className="contact-icon">📧</span>
                     <div>
@@ -99,6 +99,27 @@ const Contact = () => {
                       <p>France</p>
                     </div>
                   </div>
+                </div>
+                
+                <div className="social-links">
+                  <a 
+                    href="http://linkedin.com/in/romain-gutierrez-4214b6305/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="social-link"
+                    title="LinkedIn"
+                  >
+                    <img src="/linkedin_logo.svg" alt="linkedin logo" />
+                  </a>
+                  <a 
+                    href="https://github.com/romain2008-dot" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="social-link"
+                    title="GitHub"
+                  >
+                    <img src='/github_logo.svg' alt="github logo" />
+                  </a>
                 </div>
               </motion.div>
 
