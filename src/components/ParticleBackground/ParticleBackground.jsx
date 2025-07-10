@@ -3,13 +3,17 @@ import { motion } from 'framer-motion';
 import './ParticleBackground.css';
 
 const ParticleBackground = () => {
-  const particles = Array.from({ length: 50 }, (_, i) => ({
+
+  const isMobile = window.innerWidth <= 768;
+  const particleCount = isMobile ? 20 : 50;
+
+  const particles = Array.from({ length: particleCount }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
-    size: Math.random() * 4 + 2,
-    duration: Math.random() * 10 + 10,
-    delay: Math.random() * 20
+    size: Math.random() * 3 + 1, 
+    duration: Math.random() * 8 + 8, 
+    delay: Math.random() * 15
   }));
 
   return (
@@ -25,12 +29,7 @@ const ParticleBackground = () => {
               width: `${particle.size}px`,
               height: `${particle.size}px`
             }}
-            animate={{
-              y: [-100, -200],
-              x: [0, Math.random() * 200 - 100],
-              opacity: [0, 1, 1, 0],
-              scale: [0.8, 1.2, 0.8]
-            }}
+            animate="animate"
             transition={{
               duration: particle.duration,
               delay: particle.delay,

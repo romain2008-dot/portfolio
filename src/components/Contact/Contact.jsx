@@ -53,7 +53,7 @@ const Contact = () => {
       form.current.reset();
     }).catch(() => {
       setStatus('error');
-      setToast({ message: 'Erreur lors de l’envoi, réessayez.', type: 'error' });
+      setToast({ message: 'Erreur lors de l\'envoi, réessayez.', type: 'error' });
     });
   };
 
@@ -62,20 +62,15 @@ const Contact = () => {
       <section id="contact" className="section contact">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
           >
             <h2 className="section-title gradient-text">Contactez-moi</h2>
 
             <div className="contact-content">
               <motion.div
                 className="contact-info"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
               >
                 <h3>Travaillons ensemble !</h3>
                 <p>
@@ -84,7 +79,7 @@ const Contact = () => {
                   à les concrétiser.
                 </p>
 
-                                <div className="contact-details">
+                <div className="contact-details">
                   <div className="contact-item">
                     <span className="contact-icon">📧</span>
                     <div>
@@ -123,7 +118,9 @@ const Contact = () => {
                 </div>
               </motion.div>
 
-              <Form form={form} sendEmail={sendEmail} status={status} />
+              <motion.div >
+                <Form form={form} sendEmail={sendEmail} status={status} />
+              </motion.div>
             </div>
           </motion.div>
         </div>
