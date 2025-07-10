@@ -36,19 +36,36 @@ const Hero = () => {
       <div className="hero-background">
         <motion.div 
           className="gradient-orb"
-          animate="animate"
+          animate={{
+            y: [-10, 100, -10],
+            rotate: [0, 360]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         />
         <motion.div 
           className="gradient-orb-2"
-          animate="animate"
+          animate={{
+            y: [10, -50, 10],
+            rotate: [360, 180, 0]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         />
       </div>
 
       <div className="hero-content">
         <motion.h1 
           className="hero-title"
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
           <div className="title-container">
             <span className="title-text">{titleText}</span>
@@ -70,19 +87,21 @@ const Hero = () => {
             </AnimatePresence>
           </div>
         </motion.h1>
-        
+
         <motion.p 
           className="hero-subtitle"
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
         >
           Développeur Frontend passionné
         </motion.p>
-        
+
         <motion.div 
           className="hero-cta"
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
         >
           <Button content="Mon Github" onClick={openGithub} className="primary" />
           <Button content="Voir mon CV" onClick={openCV} className="secondary" />

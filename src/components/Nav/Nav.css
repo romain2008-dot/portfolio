@@ -1,181 +1,183 @@
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(0, 0, 0);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.nav-scrolled {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-menu button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu button:hover {
+  background: rgba(0, 184, 148, 0.2);
+  color: #00b894;
+  transform: translateY(-2px);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  position: absolute;
+}
+
+.nav-toggle span:nth-child(1) {
+  top: 8px;
+}
+
+.nav-toggle span:nth-child(2) {
+  top: 15px;
+}
+
+.nav-toggle span:nth-child(3) {
+  top: 22px;
+}
+
+.nav-toggle-open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 15px;
+}
+
+.nav-toggle-open span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.nav-toggle-open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 15px;
+}
+
+@media (max-width: 768px) {
+  .nav {
     height: 60px;
-    background: rgba(0, 0, 0);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    transition: all 0.3s ease;
     width: 100%;
     max-width: 100vw;
   }
   
-  .nav-scrolled {
-    background: rgba(0, 0, 0, 0);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-  }
-  
   .nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 0 15px;
   }
   
   .nav-brand {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 20px;
   }
   
   .nav-menu {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-  }
-  
-  .nav-menu button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 8px 16px;
-    border-radius: 20px;
+    position: fixed;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
     transition: all 0.3s ease;
+    z-index: 999;
+    height: auto;
+    max-height: 300px;
   }
-  
+
+  .nav-menu-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-menu button {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   .nav-menu button:hover {
     background: rgba(0, 184, 148, 0.2);
-    color: #00b894;
-    transform: translateY(-2px);
+    transform: none;
   }
-  
+
   .nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 5px;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-content {
+    padding: 0 10px;
   }
   
-  .nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 3px 0;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-    position: absolute;
+  .nav-brand {
+    font-size: 18px;
   }
   
-  .nav-toggle span:nth-child(1) {
-    top: 8px;
+  .nav-menu {
+    max-height: 250px;
+    background: rgba(0, 0, 0, 1);
   }
-  
-  .nav-toggle span:nth-child(2) {
-    top: 15px;
-  }
-  
-  .nav-toggle span:nth-child(3) {
-    top: 22px;
-  }
-  
-  .nav-toggle-open span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 15px;
-  }
-  
-  .nav-toggle-open span:nth-child(2) {
-    opacity: 0;
-    transform: scale(0);
-  }
-  
-  .nav-toggle-open span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 15px;
-  }
-  
-  @media (max-width: 768px) {
-    .nav {
-      height: 60px;
-      width: 100%;
-      max-width: 100vw;
-    }
-    
-    .nav-content {
-      padding: 0 15px;
-    }
-    
-    .nav-brand {
-      font-size: 20px;
-    }
-    
-    .nav-menu {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 1);
-      backdrop-filter: blur(10px);
-      flex-direction: column;
-      gap: 0;
-      transform: translateY(-100%);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 999;
-      height: auto;
-      max-height: 300px;
-    }
-  
-    .nav-menu-open {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-  
-    .nav-menu button {
-      width: 100%;
-      padding: 15px 20px;
-      text-align: left;
-      border-radius: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  
-    .nav-menu button:hover {
-      background: rgba(0, 184, 148, 0.2);
-      transform: none;
-    }
-  
-    .nav-toggle {
-      display: flex;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .nav-content {
-      padding: 0 10px;
-    }
-    
-    .nav-brand {
-      font-size: 18px;
-    }
-    
-    .nav-menu {
-      max-height: 250px;
-      background: rgba(0, 0, 0, 1);
-    }
-  } 
+}

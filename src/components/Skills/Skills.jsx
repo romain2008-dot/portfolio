@@ -25,9 +25,10 @@ const Skills = () => {
     <section id="skills" className="section skills">
       <div className="container">
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
           <h2 className="section-title gradient-text">
             Mes Compétences
@@ -44,30 +45,28 @@ const Skills = () => {
               />
             ))}
           </div>
-          <motion.div 
-            className='formation'
-          >
-            <h2 className="section-title gradient-text">
-              Formations suivies
-            </h2>
-            <div className="skills-formation">
-              <span className="formation-icon">
-                <img src="/openclassrooms_logo.svg" alt="OpenClassrooms" />
-              </span>
-              Formation suivie :
-              <a
-                href="https://openclassrooms.com/fr/paths/900-integrateur-web"
-                target="_blank"
-                rel="noopener noreferrer"
+        <div className='formation'>
+          <h2 className="section-title gradient-text">
+            Formations suivies
+          </h2>
+           <div className="skills-formation">
+            <span className="formation-icon">
+              <img src="/openclassrooms_logo.svg" alt="OpenClassrooms" />
+            </span>
+            Formation suivie :
+            <a
+              href="https://openclassrooms.com/fr/paths/900-integrateur-web"
+              target="_blank"
+              rel="noopener noreferrer"
               >
-                &nbsp;Parcours Intégrateur Web – OpenClassrooms
-              </a>
-            </div> 
-          </motion.div>
-        </motion.div>
+              &nbsp;Parcours Intégrateur Web – OpenClassrooms
+            </a>
+          </div> 
+          </div>
+              </motion.div>
       </div>
     </section>
   );
 };
 
-export default Skills; 
+export default Skills;
