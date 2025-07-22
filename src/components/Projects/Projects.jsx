@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Project from '../Project/Project';
 import './Projects.css';
@@ -19,7 +19,7 @@ const Projects = () => {
       description: "Portfolio de photographe",
       detailedDescription: "Création d'un site web pour Sophie Bluel, photographe d'art. Développement d'une galerie dynamique avec filtrage par catégories et mise en place d'un système de navigation fluide pour présenter les œuvres photographiques.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      image: "./sophie-bluel.webp",
+      image: "/sophie-bluel.webp",
       github: "https://github.com/romain2008-dot/sophie-bluel",
       live: "https://sophie-bluel-kohl.vercel.app/index.html"
     },
@@ -28,11 +28,18 @@ const Projects = () => {
       description: "Application bancaire",
       detailedDescription: "Développement d'une application bancaire avec système de connexion et gestion de profil utilisateur. Création de l'interface utilisateur, implémentation de l'authentification et possibilité de modifier le nom d'utilisateur. Préparation de la documentation Swagger pour l'API future de gestion des transactions.",
       technologies: ["React", "React Router", "Redux"],
-      image: "./argentbank.webp",
+      image: "/argentbank.webp",
       github: "https://github.com/romain2008-dot/argentBank",
       live: "https://argentbank-nu.vercel.app/"
     }
   ];
+
+  useEffect(() => {
+    projects.forEach(({ image }) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
 
   return (
     <section id="projects" className="section projects">
