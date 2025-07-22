@@ -8,7 +8,7 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const fullText = "Salut, je suis Romain Gutierrez";
+  const fullText = "Bienvenue, je suis Romain Gutierrez ";
 
   useEffect(() => {
     if (currentIndex < fullText.length) {
