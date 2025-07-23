@@ -40,15 +40,11 @@ function Project ( { project, index } ) {
 
           <div className="project-tech">
             <div className="tech-tags">
-              {(project.technologies).slice(0, isExpanded ? undefined : 3).map(tech => (
+              {(project.technologies).map(tech => (
                 <span key={tech} className="tech-tag">{tech}</span>
-              ))}
-              {!isExpanded && (project.technologies).length > 3 && (
-                <span className="tech-tag more-tag">+{(project.technologies).length - 3}</span>
-              )}
+                ))}
             </div>
           </div>
-
           <div className="project-links">
             <div className="link-buttons">
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="link-btn github-btn">
